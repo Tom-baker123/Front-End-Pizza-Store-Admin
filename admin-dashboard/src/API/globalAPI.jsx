@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 
-const CATEGORY_URL = "https://localhost:44394/api/Category";
-const TOPPING_URL = "https://localhost:44394/api/Topping";
-const SIZE_URL = "https://localhost:44394/api/Size";
-const PRODUCT_URL = "https://localhost:44394/api/Product";
-const PROMOTION_URL = "https://localhost:44394/api/Promotion"; // Thêm URL cho Promotion
+const CATEGORY_URL = "https://nhom6thu4sangca1.onrender.com/api/Category";
+const TOPPING_URL = "https://nhom6thu4sangca1.onrender.com/api/Topping";
+const SIZE_URL = "https://nhom6thu4sangca1.onrender.com/api/Size";
+const PRODUCT_URL = "https://nhom6thu4sangca1.onrender.com/api/Product";
+const PROMOTION_URL = "https://nhom6thu4sangca1.onrender.com/api/Promotion"; // Thêm URL cho Promotion
 
 // Lấy danh sách danh mục với phân trang
 export const getCategoriesList = async (pageSize = 10, pageNumber = 1) => {

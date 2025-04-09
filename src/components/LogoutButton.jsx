@@ -11,7 +11,7 @@ const LogoutButton = () => {
 
   return (
     <button className="logout-btn" onClick={handleLogout}>
-      Đăng xuất
+      <a href="https://nhom6thu4ca1fe.vercel.app/logout">  Đăng xuất</a>
     </button>
   );
 };

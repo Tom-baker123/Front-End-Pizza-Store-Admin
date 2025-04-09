@@ -5,13 +5,16 @@ const LogoutButton = () => {
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    localStorage.removeItem('adminToken');
-    navigate('/login');
+    // Xoá token khỏi localStorage hoặc context
+    localStorage.removeItem("token"); // hoặc context logout logic
+
+    // Chuyển hướng sau khi logout
+    window.location.href = "https://nhom6thu4ca1fe.vercel.app/?logout=true";
   };
 
   return (
     <button className="logout-btn" onClick={handleLogout}>
-      <a href="https://nhom6thu4ca1fe.vercel.app/">  Đăng xuất</a>
+      Đăng xuất     
     </button>
   );
 };

@@ -49,7 +49,7 @@ export const updateCategory = async (id, categoryName) => {
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
       body: JSON.stringify({ categoryId: id, categoryName }),
     });
-    if (!response.ok) throw new Error("Không sửa được danh mục");
+    if (!response.ok) throw new Error("Không sửa được danh mục sản phẩm");
     const data = await response.json();
     console.log("Danh mục đã sửa:", data);
     return data;
@@ -277,9 +277,9 @@ export const useSizes = () => {
 };
 
 // Lấy danh sách sản phẩm với phân trang
-export const getProductsList = async (pageSize = 10, pageNumber = 1) => {
+export const getProductsList = async () => {
   try {
-    const response = await fetch(`${PRODUCT_URL}?PageSize=${pageSize}&PageNumber=${pageNumber}`, {
+    const response = await fetch(`${PRODUCT_URL}`, {
       method: "GET",
       headers: { "Content-Type": "application/json", "Accept": "application/json" },
     });
